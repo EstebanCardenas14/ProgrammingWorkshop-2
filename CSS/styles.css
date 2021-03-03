@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.card-animals {
+    align-items: center;
+    font-family: 'Reem Kufi', sans-serif;
+    width: 17rem;
+    height: 17rem;
+    padding: 2%;
+    border-radius: 20% !important;
+    -webkit-box-shadow: -1px 8px 20px -2px rgba(0, 0, 0, 0.55);
+    box-shadow: -1px 8px 20px -2px rgba(0, 0, 0, 0.55);
+}
+
+.animalPicture {
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    border-radius: 100%;
+    align-items: center;
+    margin-bottom: 8.5%;
+}
+
+.card-animals:hover {
+    margin-top: -0.6%;
+    transition: all 0.5s;
+}
