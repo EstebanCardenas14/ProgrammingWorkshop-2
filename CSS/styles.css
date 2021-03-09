@@ -87,7 +87,7 @@ div.appear {
     width: 10%;
     height: 480px;
     margin-bottom: 40px;
-    box-shadow: 5px 5px 5px #888;
+    /* box-shadow: 5px 5px 5px #888; */
     padding-left: 50%;
     margin-left: 270px;
 }
@@ -100,4 +100,9 @@ div.appear {
     .formAddPet {
         width: 35rem;
     }
+}
+
+.Button-edit{
+
+    align-items: flex-end;
 }

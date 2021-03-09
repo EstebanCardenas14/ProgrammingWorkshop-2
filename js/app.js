@@ -4,10 +4,22 @@ const btnCloseForm = document.querySelector(".btn-close");
 var findmeee = document.getElementById("buttonmap");
 const card = document.querySelector(".card-animals");
 var output = document.getElementById("map");
+var edit = document.getElementById("Button-edit");
+var BtnAddedit = document.getElementById("add-edit");
+
+
+edit.addEventListener("click", () => {
+
+    formAddAnimal.style.display = "block";
+    BtnAddedit.innerText =("Editar mascota");
+    
+
+});
 
 addAnimal.addEventListener("click", () => {
 
     formAddAnimal.style.display = "block";
+    BtnAddedit.innerText =("Añadir mascota");
 
 });
 

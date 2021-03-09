@@ -28,7 +28,13 @@
                 <a id="btn-addAnimal" style="margin-left: 4%;" href="#" data-bs-toggle="popover"
                     data-bs-trigger="hover focus" title="Añadir mascota"><img id="btn-add" width="35px"
                         src="img/btn-add.svg" alt="btn-add"></a>
+
+                    
             </form>
+            <img src="img/map2.png " alt="Map" width="112" height="52">
+                
+            
+        
         </div>
     </nav>
     <!--Menu-->
@@ -40,6 +46,8 @@
             <h5 class="card-title name ">Julio Flores </h5>
             <h6 class="card-text breed"> Criollo </h6>
             <h6 class="card-text owner"> Cristian Sanchez</h6>
+            <a id="Button-edit" style="margin-left: 83%;" href="#" data-bs-toggle="popover"
+            data-bs-trigger="hover focus" > <img src= "img/boton-editar.png" width="20px"></a>
             <br></br>
         </div>
 
@@ -48,6 +56,8 @@
             <h5 class="card-title name ">Julio Flores </h5>
             <h6 class="card-text breed"> Criollo </h6>
             <h6 class="card-text owner"> Cristian Sanchez</h6>
+            <a id="Button-edit" style="margin-left: 83%;" href="#" data-bs-toggle="popover"
+            data-bs-trigger="hover focus" > <img src= "img/boton-editar.png" width="20px"></a>
             <br></br>
         </div>
         <div class="card card-animals ">
@@ -55,6 +65,8 @@
             <h5 class="card-title name ">Julio Flores </h5>
             <h6 class="card-text breed"> Criollo </h6>
             <h6 class="card-text owner"> Cristian Sanchez</h6>
+            <a id="Button-edit" style="margin-left: 83%;" href="#" data-bs-toggle="popover"
+            data-bs-trigger="hover focus" > <img src= "img/boton-editar.png" width="20px"></a>
             <br></br>
         </div>
     </div>
@@ -85,9 +97,14 @@
                     aria-describedby="validationServer03Feedback " required>
             </div>
             <div class="col-md-4 ">
-                <label for="validationServer03 " class="form-label ">Dirección</label>
-                <input type="text " placeholder="Ingrese dirección " class="form-control " id="validationServer03 "
-                    aria-describedby="validationServer03Feedback " required>
+                <label for="validationServer03 " class="form-label ">Latitud</label>
+                <input type="text " placeholder="Ingrese la latitud " class="form-control " id="validationServer03 "
+                    aria-describedby="validationServer03Feedback ">
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer03 " class="form-label ">Longitud</label>
+                <input type="text " placeholder="Ingrese la longitud" class="form-control " id="validationServer03 "
+                    aria-describedby="validationServer03Feedback ">
             </div>
             <div class="col-md-4 ">
                 <label for="validationServer03 " class="form-label ">Imagen de su mascota </label>
@@ -143,17 +160,21 @@
                 </select>
             </div>
             <div class="col-md-12 ">
-                <button class="btn btn-outline-primary " type="submit ">Añadir mascota</button>
+                <button id="add-edit" class="btn btn-outline-primary " type="submit ">Añadir mascota</button>
             </div>
+
+            <div class="col-md-12 ">
+                 <button type="button" class="btn btn-success"id=buttonmap>Mostrar Mapa</button>
+            </div>
+            
         </form>
     </div>
 
     <!--Formulario-->
     <!--Map-->
     <div class="container container-map" >
-            <img src="img/mapa.png " alt="Map" width="244" height="139">
-            <button type="button" class="btn btn-success"id=buttonmap>Mostrar Mapa</button>
-            <div id='map'></div>
+                
+    <div id='map'></div>
     </div>
     <!--Map-->
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
