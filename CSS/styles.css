@@ -55,6 +55,13 @@ body {
     margin-left: 8%;
     display: none;
 }
+.container-map{
+    align-content: center;
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+ }
 
 .formAddPet {
     margin: auto !important;
@@ -76,7 +83,18 @@ div.appear {
     width: 100%;
     height: 100%;
     background-color: aqua;
+}#map {
+    width: 10%;
+    height: 480px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 5px #888;
+    padding-left: 50%;
+    margin-left: 270px;
 }
+#marker {
+    color: red;
+}
+
 
 @media screen and (max-width: 862px) {
     .formAddPet {
