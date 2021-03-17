@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FourPawsCitiziens</title>
+    <link rel="icon" href="img/icon-logo.png">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--Menu--->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container m-auto" style="height: 5rem">
+            <a class="navbar-brand d-flex" href="#">
+                <img width="120px" height="100px" src="img/logo.svg" alt="logoPets" />
+            </a>
+
+            <a id="btn-addAnimal" style="margin-left: 4%;" href="#" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Añadir mascota"><img id="btn-add" width="35px" src="img/btn-add.svg" alt="btn-add"></a>
+
+        </div>
+    </nav>
+    <!--Menu-->
+
+    <!--Formulario-->
+
+    <br>
+
+    <div id="cr-form" class="container">
+        <form class=" formAddPet row g-3">
+
+            <div class="col-md-1">
+                <button type="button" class="btn-close" aria-label="Close" style="position: absolute;"></button>
+            </div>
+            <div class="formImage col-md-3 ">
+                <img src="img/logoForm.png " alt="logoForm " height="80px " width="80px ">
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer01 " class="form-label ">Nombre de la mascota</label>
+                <input type="text " placeholder="Nombre mascota " class="form-control " id="validationServer01 " required>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer02 " class="form-label ">Nombre del dueño</label>
+                <input type="text " placeholder="Nombre dueño " class="form-control " id="validationServer02 " required>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer03 " class="form-label ">Raza</label>
+                <input type="text " placeholder="Raza " class="form-control " id="validationServer03 " aria-describedby="validationServer03Feedback " required>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer03 " class="form-label ">Dirección</label>
+                <input type="text " placeholder="Ingrese dirección " class="form-control " id="validationServer03 " aria-describedby="validationServer03Feedback " required>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer03 " class="form-label ">Imagen de su mascota </label>
+                <input type="text " placeholder="URL de la imagen " class="form-control " id="validationServer03 " aria-describedby="validationServer03Feedback " required>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer04 " class="form-label ">Especie</label>
+                <select class="form-select " id="validationServer04 " aria-describedby="validationServer04Feedback " required>
+                <option selected value=" ">Felino</option>
+                <option selected value=" ">Canino</option>
+                <option selected value=" "></option>
+              </select>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer04 " class="form-label ">Barrio</label>
+                <select class="form-select " id="validationServer04 " aria-describedby="validationServer04Feedback " required>
+                <option selected value=" ">Usaquen</option>
+                <option selected value=" ">San cristobal</option>
+                <option selected value=" ">Chapinero</option>
+                <option selected value=" ">Santa Fe</option>
+                <option selected value=" ">Usme</option>
+                <option selected value=" ">Tunjuelito</option>
+                <option selected value=" ">Bosa</option>
+                <option selected value=" ">Kennedy</option>
+                <option selected value=" ">Fontibon</option>
+                <option selected value=" ">Engativa</option>
+                <option selected value=" ">Suba</option>
+                <option selected value=" ">B.Unidos</option>
+                <option selected value=" ">Teusaquillo</option>
+                <option selected value=" ">Los Martires</option>
+                <option selected value=" ">Antonio Nariño</option>
+                <option selected value=" ">P. Aranda</option>
+                <option selected value=" ">La candelaria</option>
+                <option selected value=" ">R.Uribe</option>
+                <option selected value=" ">C.Bolivar</option>
+                <option selected value=" ">Municipios aledaños</option>
+                <option selected value=" ">Sin identificar</option>
+                <option selected value=" "></option>
+
+              </select>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer04 " class="form-label ">Tamaño</label>
+                <select class="form-select " id="validationServer04 " aria-describedby="validationServer04Feedback " required>
+                <option selected value=" ">Grande</option>
+                <option selected value=" ">Pequeño</option>
+                <option selected value=" ">Miniatura</option>
+                <option selected value=" "></option>
+              </select>
+            </div>
+            <div class="col-md-12 ">
+                <button class="btn btn-outline-primary " type="submit ">Añadir mascota</button>
+            </div>
+        </form>
+    </div>
+
+    <!--Formulario-->
+
+
+    <!-- contenido-->
+
+    <br>
+
+
+
+
+    <!--contenido -->
+
+
+
+    <div class="container mt-3 mb-3  " style="background-color: white; border-radius: 10px;">
+        <br>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-lg-12">
+                <table id="DataPets" class="table table-striped table-bordered  table-light" style="width: 100%;">
+
+                    <thead>
+
+                        <tr>
+                            <th>Species</th>
+                            <th>pula</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>gato</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                        <tr>
+                            <th>perro</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                        <tr>
+                            <th>perro</th>
+                            <th>Pula</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                        <tr>
+                            <th>pajaro</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                        <tr>
+                            <th>Species</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                        <tr>
+                            <th>Species</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                        <tr>
+                            <th>Species</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Species</th>
+                            <th>Size</th>
+                            <th>Race</th>
+                            <th>Neighborhood</th>
+                            <th>Owner</th>
+                            <th>Address</th>
+                            <th>Picture</th>
+                        </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+        </div>
+        <br>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+    <!-- <script src="https://stackpath.bootstapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="js/app.js "></script>
+
+</body>
+
+</html>
