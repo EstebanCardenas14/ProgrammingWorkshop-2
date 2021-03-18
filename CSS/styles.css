@@ -24,6 +24,7 @@ body {
 }
 
 .card-animals {
+    align-items: center !important;
     text-align: center;
     font-family: 'Reem Kufi', sans-serif;
     width: 17rem;
@@ -58,6 +59,13 @@ body {
     margin: auto;
     display: none;
 }
+.container-map{
+    align-content: center;
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+ }
 
 .formAddPet {
     padding: 25px;
@@ -71,7 +79,40 @@ div.appear {
     opacity: 1%;
     display: block !important;
 }
+.grayBg {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}#map {
+    display: none;
+    width: 10%;
+    height: 480px;
+    margin-bottom: 40px;
+    /* box-shadow: 5px 5px 5px #888; */
+    padding-left: 50%;
+    margin-left: 270px;
+    z-index: 1;
+}
+#marker {
+    color: red;
+}
+#btnx {
+    display: none;
+    padding-left: 59%;
+    position: absolute;
+    z-index:   2;
+}
 
+
+@media screen and (max-width: 862px) {
+    .formAddPet {
+        width: 35rem;
+    }
+}
+
+.Button-edit{
+
+    align-items: flex-end;
 @media screen and (max-width: 1284px) {
     .formAddPet {
         width: 35rem;
