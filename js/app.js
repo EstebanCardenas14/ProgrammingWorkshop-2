@@ -1,5 +1,5 @@
 const addAnimal = document.getElementById("btn-addAnimal");
-const formAddAnimal = document.querySelector("#container-form");
+const formAddAnimal = document.querySelector("#cr-form");
 const btnCloseForm = document.querySelector(".btn-close");
 var imgmap = document.getElementById("img-map");
 var buttonmap = document.getElementById("buttonmap");
@@ -12,19 +12,6 @@ var BtnAddedit = document.getElementById("add-edit");
 var txtlatitude = document.getElementById("latitude");
 var txtlongitude = document.getElementById("longitude");
 var btnx = document.getElementById("btnx")
-
-edit.addEventListener("click", () => {
-    formAddAnimal.style.display = "block";
-    BtnAddedit.innerText =("Editar mascota");
-});
-edit1.addEventListener("click", () => {
-  formAddAnimal.style.display = "block";
-  BtnAddedit.innerText =("Editar mascota");
-});
-edit2.addEventListener("click", () => {
-  formAddAnimal.style.display = "block";
-  BtnAddedit.innerText =("Editar mascota");
-});
 
 addAnimal.addEventListener("click", () => {
 
@@ -79,4 +66,16 @@ buttonmap.addEventListener("click", () => {
 btnx.addEventListener( "click", ()=>{
   output.style.display = "none";
   btnx.style.display = "none"
+});
+edit.addEventListener("click", () => {
+    formAddAnimal.style.display = "block";
+    BtnAddedit.innerText =("Editar mascota");
+});
+edit1.addEventListener("click", () => {
+  formAddAnimal.style.display = "block";
+  BtnAddedit.innerText =("Editar mascota");
+});
+edit2.addEventListener("click", () => {
+  formAddAnimal.style.display = "block";
+  BtnAddedit.innerText =("Editar mascota");
 });
