@@ -38,7 +38,7 @@
     <br>
 
     <div id="cr-form" class="container">
-        <form class=" formAddPet row g-3">
+        <form class=" formAddPet row g-3" id="formAdd">
 
             <div class="col-md-1">
                 <button type="button" class="btn-close" aria-label="Close" style="position: absolute;"></button>
@@ -46,75 +46,88 @@
             <div class="formImage col-md-3 ">
                 <img src="img/logoForm.png " alt="logoForm " height="80px " width="80px ">
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 " >
                 <label for="validationServer01 " class="form-label ">Nombre de la mascota</label>
-                <input type="text " placeholder="Nombre mascota " class="form-control " id="validationServer01 "
+                <input type="text " placeholder="Nombre mascota " class="form-control " id="NamePet"
                     required>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 " >
                 <label for="validationServer02 " class="form-label ">Nombre del dueño</label>
-                <input type="text " placeholder="Nombre dueño " class="form-control " id="validationServer02 " required>
+                <input type="text " placeholder="Nombre dueño " class="form-control " id="NamePerson" required>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 " >
                 <label for="validationServer03 " class="form-label ">Raza</label>
-                <input type="text " placeholder="Raza " class="form-control" aria-describedby="validationServer03Feedback " required>
+                <input type="text " placeholder="Raza " class="form-control" aria-describedby="validationServer03Feedback " id="race" required>
             </div>
-            <div class="col-md-4 ">
-                <label for="validationServer03 " class="form-label ">Dirección</label>
-                <input type="text " placeholder="Ingrese dirección " class="form-control" aria-describedby="validationServer03Feedback " required>
+            <div class="col-md-4 " >
+                <label for="validationServer03 " class="form-label ">Direccion</label>
+                <input type="text " placeholder="Ingrese su direccion " class="form-control" aria-describedby="validationServer03Feedback " id="direccion" required>
             </div>
-            <div class="col-md-4 ">
-                <label for="validationServer03 " class="form-label ">Imagen de su mascota </label>
-                <input type="text " placeholder="URL de la imagen " class="form-control" aria-describedby="validationServer03Feedback " required>
+            <div class="col-md-4 " >
+                <label for="validationServer03 " class="form-label ">Latitud</label>
+                <input type="text " placeholder="Ingrese la Latitud " class="form-control" aria-describedby="validationServer03Feedback " id="latitudFA" required>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4" >
+                <label for="validationServer03 " class="form-label ">Longitud </label>
+                <input type="text " placeholder="Ingrese la Longitud " class="form-control" aria-describedby="validationServer03Feedback " id="LongitudFA" required>
+            </div>
+            <div class="col-md-4 " >
                 <label for="validationServer04 " class="form-label ">Especie</label>
-                <select class="form-select " aria-describedby="validationServer04Feedback " required>
-                <option selected value=" ">Felino</option>
-                <option selected value=" ">Canino</option>
+                <select class="form-select " aria-describedby="validationServer04Feedback " id="species" required>
+                <option selected value="Felino">Felino</option>
+                <option selected value="Canino">Canino</option>
                 <option selected value=" "></option>
               </select>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 " >
                 <label for="validationServer04 " class="form-label ">Barrio</label>
-                <select class="form-select " aria-describedby="validationServer04Feedback " required>
-                <option selected value=" ">Usaquen</option>
-                <option selected value=" ">San cristobal</option>
-                <option selected value=" ">Chapinero</option>
-                <option selected value=" ">Santa Fe</option>
-                <option selected value=" ">Usme</option>
-                <option selected value=" ">Tunjuelito</option>
-                <option selected value=" ">Bosa</option>
-                <option selected value=" ">Kennedy</option>
-                <option selected value=" ">Fontibon</option>
-                <option selected value=" ">Engativa</option>
-                <option selected value=" ">Suba</option>
-                <option selected value=" ">B.Unidos</option>
-                <option selected value=" ">Teusaquillo</option>
-                <option selected value=" ">Los Martires</option>
-                <option selected value=" ">Antonio Nariño</option>
-                <option selected value=" ">P. Aranda</option>
-                <option selected value=" ">La candelaria</option>
-                <option selected value=" ">R.Uribe</option>
-                <option selected value=" ">C.Bolivar</option>
-                <option selected value=" ">Municipios aledaños</option>
-                <option selected value=" ">Sin identificar</option>
-                <option selected value=" "></option>
+                <select class="form-select " aria-describedby="validationServer04Feedback " id="neighborhood" required>
+                <option selected value="Usaquen">Usaquen</option>
+                <option selected value="San cristobal">San cristobal</option>
+                <option selected value="Chapinero">Chapinero</option>
+                <option selected value="Santa Fe">Santa Fe</option>
+                <option selected value="Usme">Usme</option>
+                <option selected value="Tunjuelito">Tunjuelito</option>
+                <option selected value="Kennedy">Kennedy</option>
+                <option selected value="Kennedy">Kennedy</option>
+                <option selected value="Fontibon">Fontibon</option>
+                <option selected value="Engativa">Engativa</option>
+                <option selected value="Suba">Suba</option>
+                <option selected value="B.Unidos">B.Unidos</option>
+                <option selected value="Teusaquillo">Teusaquillo</option>
+                <option selected value="Los Martires">Los Martires</option>
+                <option selected value="Antonio Nariño">Antonio Nariño</option>
+                <option selected value="P. Aranda">P. Aranda</option>
+                <option selected value="La candelaria">La candelaria</option>
+                <option selected value="R.Uribe">R.Uribe</option>
+                <option selected value="C.Bolivar">C.Bolivar</option>
+                <option selected value="Municipios aledaños">Municipios aledaños</option>
+                <option selected value="Sin identificar">Sin identificar</option>
+                <option selected value="21"></option>
 
               </select>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4 " >
                 <label for="validationServer04 " class="form-label ">Tamaño</label>
-                <select class="form-select " aria-describedby="validationServer04Feedback " required>
-                <option selected value=" ">Grande</option>
-                <option selected value=" ">Pequeño</option>
-                <option selected value=" ">Miniatura</option>
+                <select class="form-select " aria-describedby="validationServer04Feedback " id="size" required>
+                <option selected value="Grande">Grande</option>
+                <option selected value="Pequeño">Pequeño</option>
+                <option selected value="Miniatura">Miniatura</option>
                 <option selected value=" "></option>
               </select>
             </div>
 
-            <div class="col-md-12 ">
+            <div class="col-md-4">
+                <label for="image">Nueva imagen</label>
+                <input type="file" class="form-control-file" name="image" id="image">
+            </div>
+
+            <div class="col-md-6 ">
                 <button type="button" class="btn btn-success" id=buttonmap>Mostrar Mapa</button>
+            </div>
+
+            <div class="col-md-6 ">
+                <button type="button" class="btn btn-primary" id=buttonsave>Agregar Mascota</button>
             </div>
 
         </form>
@@ -138,9 +151,9 @@
                             <input type="text" id="#race" class="form-control" required>
                             <label for="">Owner : </label>
                             <input type="text" id="#owner" class="form-control" required>
-                            <label for="">Address : </label>
+                            <label for="">Latitud : </label>
                             <input type="text" id="#adress" class="form-control" required>
-                            <label for="">Picture : </label>
+                            <label for="">Longitud : </label>
                             <input type="text" id="#picture" class="form-control" required>
                         </div>
                     </form>
