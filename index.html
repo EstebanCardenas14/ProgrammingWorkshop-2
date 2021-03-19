@@ -12,7 +12,8 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 </head>
 
@@ -24,7 +25,9 @@
                 <img width="120px" height="100px" src="img/logo.svg" alt="logoPets" />
             </a>
             <img id="img-map" src="img/map2.png " alt="Map" width="112" height="52">
-            <a id="btn-addAnimal" style="margin-left: 4%;" href="#" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Añadir mascota"><img id="btn-add" width="35px" src="img/btn-add.svg" alt="btn-add"></a>
+            <a id="btn-addAnimal" style="margin-left: 4%;" href="#" data-bs-toggle="popover"
+                data-bs-trigger="hover focus" title="Añadir mascota"><img id="btn-add" width="35px"
+                    src="img/btn-add.svg" alt="btn-add"></a>
 
         </div>
     </nav>
@@ -46,89 +49,109 @@
             <div class="formImage col-md-3 ">
                 <img src="img/logoForm.png " alt="logoForm " height="80px " width="80px ">
             </div>
-            <div class="col-md-4 " >
-                <label for="validationServer01 " class="form-label ">Nombre de la mascota</label>
-                <input type="text " placeholder="Nombre mascota " class="form-control " id="NamePet"
-                    required>
+            <div class="col-md-4 ">
+                <label for="validationServer01 " class="form-label ">Microship</label>
+                <input type="text " placeholder="Ingrese el Microship" class="form-control " id="microship" required>
             </div>
-            <div class="col-md-4 " >
-                <label for="validationServer02 " class="form-label ">Nombre del dueño</label>
-                <input type="text " placeholder="Nombre dueño " class="form-control " id="NamePerson" required>
-            </div>
-            <div class="col-md-4 " >
-                <label for="validationServer03 " class="form-label ">Raza</label>
-                <input type="text " placeholder="Raza " class="form-control" aria-describedby="validationServer03Feedback " id="race" required>
-            </div>
-            <div class="col-md-4 " >
-                <label for="validationServer03 " class="form-label ">Direccion</label>
-                <input type="text " placeholder="Ingrese su direccion " class="form-control" aria-describedby="validationServer03Feedback " id="direccion" required>
-            </div>
-            <div class="col-md-4 " >
-                <label for="validationServer03 " class="form-label ">Latitud</label>
-                <input type="text " placeholder="Ingrese la Latitud " class="form-control" aria-describedby="validationServer03Feedback " id="latitudFA" required>
-            </div>
-            <div class="col-md-4" >
-                <label for="validationServer03 " class="form-label ">Longitud </label>
-                <input type="text " placeholder="Ingrese la Longitud " class="form-control" aria-describedby="validationServer03Feedback " id="LongitudFA" required>
-            </div>
-            <div class="col-md-4 " >
-                <label for="validationServer04 " class="form-label ">Especie</label>
+            <div class="col-md-4 ">
+                <label for="validationServer02 " class="form-label ">Especie</label>
                 <select class="form-select " aria-describedby="validationServer04Feedback " id="species" required>
-                <option selected value="Felino">Felino</option>
-                <option selected value="Canino">Canino</option>
-                <option selected value=" "></option>
-              </select>
+                    <option selected value="FELINO">FELINO</option>
+                    <option selected value="CANINO">CANINO</option>
+                    <option selected value=" "></option>
+                </select>
             </div>
-            <div class="col-md-4 " >
-                <label for="validationServer04 " class="form-label ">Barrio</label>
-                <select class="form-select " aria-describedby="validationServer04Feedback " id="neighborhood" required>
-                <option selected value="Usaquen">Usaquen</option>
-                <option selected value="San cristobal">San cristobal</option>
-                <option selected value="Chapinero">Chapinero</option>
-                <option selected value="Santa Fe">Santa Fe</option>
-                <option selected value="Usme">Usme</option>
-                <option selected value="Tunjuelito">Tunjuelito</option>
-                <option selected value="Kennedy">Kennedy</option>
-                <option selected value="Kennedy">Kennedy</option>
-                <option selected value="Fontibon">Fontibon</option>
-                <option selected value="Engativa">Engativa</option>
-                <option selected value="Suba">Suba</option>
-                <option selected value="B.Unidos">B.Unidos</option>
-                <option selected value="Teusaquillo">Teusaquillo</option>
-                <option selected value="Los Martires">Los Martires</option>
-                <option selected value="Antonio Nariño">Antonio Nariño</option>
-                <option selected value="P. Aranda">P. Aranda</option>
-                <option selected value="La candelaria">La candelaria</option>
-                <option selected value="R.Uribe">R.Uribe</option>
-                <option selected value="C.Bolivar">C.Bolivar</option>
-                <option selected value="Municipios aledaños">Municipios aledaños</option>
-                <option selected value="Sin identificar">Sin identificar</option>
-                <option selected value="21"></option>
-
-              </select>
+            <div class="col-md-4 ">
+                <label for="validationServer03 " class="form-label ">Sexo</label>
+                <select class="form-select " aria-describedby="validationServer04Feedback " id="sex" required>
+                    <option selected value="MACHO">MACHO</option>
+                    <option selected value="HEMBRA">HEMBRA</option>
+                </select>
             </div>
-            <div class="col-md-4 " >
-                <label for="validationServer04 " class="form-label ">Tamaño</label>
+            <div class="col-md-4 ">
+                <label for="validationServer4 " class="form-label ">Tamaño</label>
                 <select class="form-select " aria-describedby="validationServer04Feedback " id="size" required>
-                <option selected value="Grande">Grande</option>
-                <option selected value="Pequeño">Pequeño</option>
-                <option selected value="Miniatura">Miniatura</option>
-                <option selected value=" "></option>
-              </select>
+                    <option selected value="GRANDE">Grande</option>
+                    <option selected value="PEQUEÑO">Pequeño</option>
+                    <option selected value="MINIATURA">Miniatura</option>
+                    <option selected value=" "></option>
+                </select>
             </div>
+            <div class="col-md-4 ">
+                <label for="validationServer5 " class="form-label ">puede ser Peligroso</label>
+                <select class="form-select " aria-describedby="validationServer04Feedback " id="pDangerous" required>
+                    <option selected value="SI">SI</option>
+                    <option selected value="NO">NO</option>
+                </select>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer09 " class="form-label ">Barrio</label>
+                <select class="form-select " aria-describedby="validationServer04Feedback " id="neighborhood" required>
+                    <option selected value="Usaquen">Usaquen</option>
+                    <option selected value="San cristobal">San cristobal</option>
+                    <option selected value="Chapinero">Chapinero</option>
+                    <option selected value="Santa Fe">Santa Fe</option>
+                    <option selected value="Usme">Usme</option>
+                    <option selected value="Tunjuelito">Tunjuelito</option>
+                    <option selected value="Kennedy">Kennedy</option>
+                    <option selected value="Kennedy">Kennedy</option>
+                    <option selected value="Fontibon">Fontibon</option>
+                    <option selected value="Engativa">Engativa</option>
+                    <option selected value="Suba">Suba</option>
+                    <option selected value="B.Unidos">B.Unidos</option>
+                    <option selected value="Teusaquillo">Teusaquillo</option>
+                    <option selected value="Los Martires">Los Martires</option>
+                    <option selected value="Antonio Nariño">Antonio Nariño</option>
+                    <option selected value="P. Aranda">P. Aranda</option>
+                    <option selected value="La candelaria">La candelaria</option>
+                    <option selected value="R.Uribe">R.Uribe</option>
+                    <option selected value="C.Bolivar">C.Bolivar</option>
+                    <option selected value="Municipios aledaños">Municipios aledaños</option>
+                    <option selected value="Sin identificar">Sin identificar</option>
+                    <option selected value="21"></option>
+
+                </select>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer03 " class="form-label ">Raza</label>
+                <input type="text " placeholder="Ingrese la raza " class="form-control"
+                    aria-describedby="validationServer03Feedback " id="race" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationServer07 " class="form-label ">Nombre del Dueño </label>
+                <input type="text " placeholder="Ingrese nombre del Dueño" class="form-control"
+                    aria-describedby="validationServer03Feedback " id="owner" required>
+            </div>
+            <div class="col-md-4 ">
+                <label for="validationServer04 " class="form-label ">Direccion</label>
+                <input type="text " placeholder="Ingrese la Direccion" class="form-control"
+                    aria-describedby="validationServer03Feedback " id="adress" required>
+            </div>
+           
+            <div class="col-md-4 ">
+                <label for="validationServer05 " class="form-label ">Latitud</label>
+                <input type="text " placeholder="Utilizar Map/ Ingresar" class="form-control"
+                    aria-describedby="validationServer03Feedback " id="latitudFA" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationServer06 " class="form-label ">Longitud </label>
+                <input type="text " placeholder="Utilizar Map/ Ingresar" class="form-control"
+                    aria-describedby="validationServer03Feedback " id="LongitudFA" required>
+            </div>
+           
+
+           
 
             <div class="col-md-4">
                 <label for="image">Nueva imagen</label>
                 <input type="file" class="form-control-file" name="image" id="image">
+                <button type="button" class="btn btn-success" id=buttonmap style="margin-top: 5px;">Mostrar
+                    Mapa</button>
+                <button type="button" class="btn btn-primary" id=buttonsave style="margin-top: 5px;">Agregar
+                    Mascota</button>
+
             </div>
 
-            <div class="col-md-6 ">
-                <button type="button" class="btn btn-success" id=buttonmap>Mostrar Mapa</button>
-            </div>
-
-            <div class="col-md-6 ">
-                <button type="button" class="btn btn-primary" id=buttonsave>Agregar Mascota</button>
-            </div>
 
         </form>
     </div>
@@ -151,11 +174,14 @@
                             <input type="text" id="#race" class="form-control" required>
                             <label for="">Owner : </label>
                             <input type="text" id="#owner" class="form-control" required>
-                            <label for="">Latitud : </label>
-                            <input type="text" id="#adress" class="form-control" required>
-                            <label for="">Longitud : </label>
-                            <input type="text" id="#picture" class="form-control" required>
+                            <label for="">Latitud (Adress): </label>
+                            <input type="text" id="#latitud" class="form-control" required>
+                            <label for="">Longitud (Adress) : </label>
+                            <input type="text" id="#longitud" class="form-control" required>
+                            <label for="">Picture : </label>
+                            <input type="file" class="btn form-control-file" name="image" id="image">
                         </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -173,56 +199,52 @@
     <!-- contenido-->
 
 
-    <div class="container mt-3 mb-3  " style="background-color: white; border-radius: 10px;">
-        <br>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-lg-12">
-                <table id="example" class="table table-striped table-bordered  table-light table-hover" style="width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>microship</th>
-                            <th>species</th>
-                            <th>sex</th>
-                            <th>size</th>
-                            <th>potentDangerous</th>
-                            <th>neighborhood</th>
-                            <!-- <th>owner</th>
-                            <th>address</th>
-                            <th>picture</th> -->
-                            <th></th>
-                        </tr>
-
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>microship</th>
-                            <th>species</th>
-                            <th>sex</th>
-                            <th>size</th>
-                            <th>potentDangerous</th>
-                            <th>neighborhood</th>
-                            <th></th>
-                        </tr> 
-                    </tbody>
-                </table>
+    <div class="container mt-3 mb-3  " style="background-color: white; border-radius: 5px;">
+        <div class="table-responsive">
+            <br>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-12">
+                    <table id="table1" class="display dataTable" style="width: 80%;">
+                        <thead>
+                            <tr>
+                                <th>microship</th>
+                                <th>species</th>
+                                <th>sex</th>
+                                <th>size</th>
+                                <th>pDangerous</th>
+                                <th>neighborhood</th>
+                                <th>Actualizar</th>
+                                <th>race</th>
+                                <th>owner</th>
+                                <th>address</th>
+                                <th>picture</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
         <br>
     </div>
     <!--contenido -->
-  <!--Map-->
+    <!--Map-->
     <div class="container container-map">
-        <a id="btnx"  href="#">
+        <a id="btnx" href="#">
             <img src="img/letra-x.png" width="20px"></a>
         <div id='map'></div>
-        
+
     </div>
     <!--Map-->
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
