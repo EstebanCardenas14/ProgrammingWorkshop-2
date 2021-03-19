@@ -1,34 +1,35 @@
 var data;
-d3.dsv(";", "./data/pets-citizens.csv", function (d) {
-    return [
-        d.microchip,
-        d.species,
-        d.sex,
-        d.size,
-        d.potentDangerous,
-        d.neighborhood
-    ];
-}).then(function (data) {
-    $(document).ready(function () {
-        $('#table1').DataTable({
-            data: data,
-            columns: [
-                { title: "microship" },
-                { title: "species" },
-                { title: "sex" },
-                { title: "size" },
-                { title: "pDangerous" },
-                { title: "neighborhood" },
-                { "defaultContent": `<button class = "btn btn-success" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` },
-                { title: "race" },
-                { title: "owner" },
-                { title: "address" },
-                { title: "picture" },
-            ]
+d3.dsv(";", "./data/pets-citizens.csv", function(d) {
+        return [
+            d.microchip,
+            d.species,
+            d.sex,
+            d.size,
+            d.potentDangerous,
+            d.neighborhood,
+        ];
+    }).then(function(data) {
+        $(document).ready(function() {
+
+            $('#table1').DataTable({
+                data: data,
+                columns: [
+                    { title: "microship" },
+                    { title: "species" },
+                    { title: "sex" },
+                    { title: "size" },
+                    { title: "pDangerous" },
+                    { title: "neighborhood" },
+                    { "race": "Null" },
+                    { "owner": "Null" },
+                    { "address": "Null" },
+                    { "defaultContent": `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` },
+                ]
+            });
+
         });
-    });
-})
-    .catch(function (error) {
+    })
+    .catch(function(error) {
         // handle error
         console.log('error', error);
 
@@ -83,7 +84,7 @@ function insertRowinTable(dataf) {
 
     NewCellRef = TableRowRef.insertCell(5);
     NewCellRef.textContent = neighborhood
-    
+
     NewCellRef = TableRowRef.insertCell(6);
     NewCellRef.textContent = ""
 
@@ -99,4 +100,3 @@ function insertRowinTable(dataf) {
     console.log(data);
 
 }
-
