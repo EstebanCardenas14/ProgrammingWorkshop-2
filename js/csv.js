@@ -76,19 +76,19 @@ function insertRowinTable(dataf ){
     console.log(dataf.get("NamePerson"));
 
      NewCellRef = TableRowRef.insertCell(1);
-     NewCellRef.textContent = dataf.get("species");
+     NewCellRef.textContent = document.querySelector("#species").value;
 
      NewCellRef = TableRowRef.insertCell(2);
-     NewCellRef.textContent = dataf.get("NamePet");
+     NewCellRef.textContent = document.querySelector("#NamePet").value;
 
      NewCellRef = TableRowRef.insertCell(3);
-     NewCellRef.textContent = dataf.get("size");
+     NewCellRef.textContent = document.querySelector("#size").value;
 
      NewCellRef = TableRowRef.insertCell(4);
-     NewCellRef.textContent = dataf.get("direccion");
+     NewCellRef.textContent = document.querySelector("#direccion").value
 
      NewCellRef = TableRowRef.insertCell(5);
-     NewCellRef.textContent = dataf.get("neighborhood");
+     NewCellRef.textContent = document.querySelector("#neighborhood").value;
 
 
 }
