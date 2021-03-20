@@ -1,7 +1,23 @@
 let globaldata;
 var id = 0;
-var saveChanges = document.querySelector("#btnsavechanges");
+let saveChanges = document.querySelector("#btnsavechanges");
+let newInfo;
 
+let addmicroship = document.querySelector("#addmicroship").value;
+let addspecies = document.querySelector("#addspecies").value;
+let addsex = document.querySelector("#addsex").value;
+let addsize = document.querySelector("#size").value;
+let addpotentDangerous = document.querySelector("#addpDangerous").value;
+let addneighborhood = document.querySelector("#addneighborhood").value;
+let addrace = document.querySelector("#addrace").value;
+let addowner = document.querySelector("#addowner").value;
+let addadress = document.querySelector("#addadress").value;
+let addlatitudFA = document.querySelector("#addlatitudFA").value;
+let addLongitudFA = document.querySelector("#addLongitudFA").value;
+
+
+// console.log(namePet, namePerson, race, direccion, latitude, longitude, species, neighborhood,size,image);
+var form = document.getElementById("formAdd");
 d3.dsv(";", "./data/pets-citizens.csv", function (d) {
     return [
         d.microchip,
@@ -27,73 +43,53 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
                 { title: "owner" },
                 { title: "address" },
                 { "defaultContent": `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` },
-            ],           
-             select: true
+            ],
+            select: true
         });
-        $('#xxx').click( function () {
-            console.log("haosfa")
-            t.row('.selected').remove().draw( false );
-        } );
-        $('#table1 tbody').on( 'click', 'tr', function () {
-            if ( $(this).hasClass('selected') ) {
+        
+        
+        $('#table1 tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
-            }
-            else {
+            } else {
                 t.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
             }
-        } );
-        
-     
+        });
+        $('#btnsavechanges').on('click', function () {
+            if ($(this).hasClass('selected')) {
+                t.row('.selected').remove().draw(false);
+            }
+        });
         $('#buttonsave').on('click', function () {
-            console.log("asf")
             t.row.add([
-                microship,
-                species,
-                sex,
-                size,
-                potentDangerous,
-                neighborhood,
-                race,
-                owner,
-                adress,
-                `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` 
+                document.querySelector("#addmicroship").value,
+                document.querySelector("#addspecies").value,
+                document.querySelector("#addsex").value,
+                document.querySelector("#addsize").value,
+                document.querySelector("#addpDangerous").value,
+                document.querySelector("#addneighborhood").value,
+                document.querySelector("#addrace").value,
+                document.querySelector("#addowner").value,
+                document.querySelector("#addadress").value,
+                `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
             ]).draw(false);
         });
-        $('editar222').on('click', '.table-remove', function () { $(this).parents('tr').detach(); });
-        
+
+        $('editSaveChanges').on('click', '.table-remove', function () { $(this).parents('tr').detach(); });
+
         // Automatically add a first row of data
-        $('#addRow').click();
+        $('#editSaveChanges').click();
         globaldata = data;
+    })
+}).catch(function (error) {
+    // handle error
+    console.log('error', error);
+});
 
-    });
+let closeFormAdd = getElementById('closeFormAdd')
+closeFormAdd.addEventListener('click', () => {
+    getElementById('formAdd').style('display: none');
 })
-    .catch(function (error) {
-        // handle error
-        console.log('error', error);
-
-    });
-
-// var buttonSave;
-var newInfo;
-
-var microship = document.querySelector("#microship").value;
-var species = document.querySelector("#species").value;
-var sex = document.querySelector("#sex").value;
-var size = document.querySelector("#size").value;
-var potentDangerous = document.querySelector("#pDangerous").value;
-var neighborhood = document.querySelector("#neighborhood").value;
-var race = document.querySelector("#race").value;
-var owner = document.querySelector("#owner").value;
-var adress = document.querySelector("#adress").value;
-var latitudFA = document.querySelector("#latitudFA").value;
-var LongitudFA = document.querySelector("#LongitudFA").value;
-
-
-// console.log(namePet, namePerson, race, direccion, latitude, longitude, species, neighborhood,size,image);
-var form = document.getElementById("formAdd");
-
-
-
 
 

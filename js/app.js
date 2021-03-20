@@ -1,6 +1,6 @@
 const addAnimal = document.getElementById("btn-addAnimal");
-const formAddAnimal = document.querySelector("#cr-form");
-const btnCloseForm = document.querySelector(".btn-close");
+const formAddAnimal = document.querySelector("#formAdd");
+const btnCloseForm = document.querySelector("#closeFormAdd");
 var imgmap = document.getElementById("img-map");
 var buttonmap = document.getElementById("buttonmap");
 const card = document.querySelector(".card-animals");
@@ -13,13 +13,7 @@ var txtlatitude = document.getElementById("latitude");
 var txtlongitude = document.getElementById("longitude");
 var btnx = document.getElementById("btnx")
 
-addAnimal.addEventListener("click", () => {
-    formAddAnimal.style.display = "block";
-});
 
-btnCloseForm.addEventListener("click", () => {
-    formAddAnimal.style.display = "none";
-});
 
 function findMe() {
   function localization(posicion) {
@@ -48,11 +42,23 @@ function findMe() {
   }
   navigator.geolocation.getCurrentPosition(localization, error);
 }
+
+
+addAnimal.addEventListener("click", () => {
+
+    formAddAnimal.style.display = "block";
+    BtnAddedit.innerText =("Añadir mascota");
+
+});
+
+btnCloseForm.addEventListener("click", () => formAddAnimal.style.display = "none");
+
 imgmap.addEventListener("click", () => {
   output.style.display = "block"
   btnx.style.display = "block"
   findMe()
 });
+
 buttonmap.addEventListener("click", () => {
   output.style.display = "block"
   btnx.style.display = "block"
@@ -63,14 +69,22 @@ btnx.addEventListener( "click", ()=>{
   btnx.style.display = "none"
 });
 edit.addEventListener("click", () => {
+
     formAddAnimal.style.display = "block";
     BtnAddedit.innerText =("Editar mascota");
+
 });
+
 edit1.addEventListener("click", () => {
+
   formAddAnimal.style.display = "block";
   BtnAddedit.innerText =("Editar mascota");
+
 });
+
 edit2.addEventListener("click", () => {
+
   formAddAnimal.style.display = "block";
   BtnAddedit.innerText =("Editar mascota");
+
 });
