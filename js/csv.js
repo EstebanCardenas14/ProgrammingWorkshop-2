@@ -1,4 +1,7 @@
 let globaldata;
+var id = 0;
+var saveChanges = document.querySelector("#btnsavechanges");
+
 d3.dsv(";", "./data/pets-citizens.csv", function (d) {
     return [
         d.microchip,
@@ -12,7 +15,6 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
     $(document).ready(function () {
 
         var t = $('#table1').DataTable({
-
             data: data,
             columns: [
                 { title: "microship" },
@@ -25,8 +27,24 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
                 { title: "owner" },
                 { title: "address" },
                 { "defaultContent": `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` },
-            ]
+            ],           
+             select: true
         });
+        $('#table1 tbody').on( 'click', 'tr', function () {
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                t.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        } );
+        $('#btnsavechanges').on( 'click',function () {
+            if ( $(this).hasClass('selected') ) {
+            t.row('.selected').remove().draw( false );
+            }
+        } );
+     
         $('#buttonsave').on('click', function () {
             console.log("asf")
             t.row.add([
@@ -40,9 +58,10 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
                 owner,
                 adress,
                 { "defaultContent": `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` },
-
             ]).draw(false);
         });
+        $('editar222').on('click', '.table-remove', function () { $(this).parents('tr').detach(); });
+        
         // Automatically add a first row of data
         $('#addRow').click();
         globaldata = data;

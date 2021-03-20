@@ -41,7 +41,7 @@ function findMe() {
     L.control.scale().addTo(map);
     //Add a marker
     var x = new L.marker([latitude, longitude], { draggable: true }).addTo(map);
-    x.addEventListener("click", () => {
+    x.addEventListener("click", () => { 
       txtlatitude.value = x.getLatLng().lat;
       txtlongitude.value = x.getLatLng().lng;
     
