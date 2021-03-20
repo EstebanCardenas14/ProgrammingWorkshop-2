@@ -5,9 +5,6 @@ var imgmap = document.getElementById("img-map");
 var buttonmap = document.getElementById("buttonmap");
 const card = document.querySelector(".card-animals");
 var output = document.getElementById("map");
-var edit = document.getElementById("Button-edit0");
-var edit1 = document.getElementById("Button-edit1");
-var edit2= document.getElementById("Button-edit2");
 var BtnAddedit = document.getElementById("add-edit");
 var txtlatitude = document.getElementById("latitude");
 var txtlongitude = document.getElementById("longitude");
@@ -67,24 +64,4 @@ buttonmap.addEventListener("click", () => {
 btnx.addEventListener( "click", ()=>{
   output.style.display = "none";
   btnx.style.display = "none"
-});
-edit.addEventListener("click", () => {
-
-    formAddAnimal.style.display = "block";
-    BtnAddedit.innerText =("Editar mascota");
-
-});
-
-edit1.addEventListener("click", () => {
-
-  formAddAnimal.style.display = "block";
-  BtnAddedit.innerText =("Editar mascota");
-
-});
-
-edit2.addEventListener("click", () => {
-
-  formAddAnimal.style.display = "block";
-  BtnAddedit.innerText =("Editar mascota");
-
 });
