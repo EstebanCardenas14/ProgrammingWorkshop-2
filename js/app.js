@@ -7,6 +7,14 @@ var edit = document.getElementById("Button-edit0");
 var edit1 = document.getElementById("Button-edit1");
 var edit2 = document.getElementById("Button-edit2");
 // var BtnAddedit = document.getElementById("add-edit");
+
+const formAddAnimal = document.querySelector("#formAdd");
+const btnCloseForm = document.querySelector("#closeFormAdd");
+var imgmap = document.getElementById("img-map");
+var buttonmap = document.getElementById("buttonmap");
+const card = document.querySelector(".card-animals");
+var output = document.getElementById("map");
+var BtnAddedit = document.getElementById("add-edit");
 var txtlatitude = document.getElementById("latitude");
 var txtlongitude = document.getElementById("longitude");
 
@@ -14,16 +22,7 @@ var btnx = document.getElementById("btnx")
 var imgmap = document.getElementById("img-map");
 var output = document.getElementById("map");
 
-addAnimal.addEventListener("click", () => {
 
-    formAddAnimal.style.display = "block";
-});
-
-btnCloseForm.addEventListener("click", () => {
-
-    formAddAnimal.style.display = "none";
-
-});
 
 function findMe() {
     function localization(posicion) {
@@ -53,16 +52,32 @@ function findMe() {
     }
     navigator.geolocation.getCurrentPosition(localization, error);
 }
+
+
+addAnimal.addEventListener("click", () => {
+
+    formAddAnimal.style.display = "block";
+    BtnAddedit.innerText = ("Añadir mascota");
+
+});
+
+btnCloseForm.addEventListener("click", () => formAddAnimal.style.display = "none");
+
 imgmap.addEventListener("click", () => {
     output.style.display = "block"
         // btnx.style.display = "block"
     findMe()
+    output.style.display = "block"
+    btnx.style.display = "block"
+    findMe();
 });
+
 buttonmap.addEventListener("click", () => {
     output.style.display = "block"
     btnx.style.display = "block"
     findMe()
 });
+
 // btnx.addEventListener("click", () => {
 //     output.style.display = "none";
 //     btnx.style.display = "none"
@@ -79,3 +94,8 @@ buttonmap.addEventListener("click", () => {
 //     formAddAnimal.style.display = "block";
 //     BtnAddedit.innerText = ("Editar mascota");
 // });
+
+btnx.addEventListener("click", () => {
+    output.style.display = "none";
+    btnx.style.display = "none"
+});
