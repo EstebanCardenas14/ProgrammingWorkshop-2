@@ -52,20 +52,21 @@ body {
     height: auto;
     z-index: 1;
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
     display: none;
 }
-.container-map{
+
+.container-map {
     align-content: center;
     vertical-align: center;
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
- }
+}
 
 .formAddPet {
     padding: 25px;
@@ -79,11 +80,14 @@ div.appear {
     opacity: 1%;
     display: block !important;
 }
+
 .grayBg {
     width: 100%;
     height: 100%;
     background-color: aqua;
-}#map {
+}
+
+#map {
     display: none;
     width: 10%;
     height: 480px;
@@ -93,16 +97,17 @@ div.appear {
     margin-left: 270px;
     z-index: 1;
 }
+
 #marker {
     color: red;
 }
+
 #btnx {
     display: none;
     padding-left: 59%;
     position: absolute;
-    z-index:   2;
+    z-index: 2;
 }
-
 
 @media screen and (max-width: 862px) {
     .formAddPet {
@@ -110,14 +115,14 @@ div.appear {
     }
 }
 
-.Button-edit{
-
+.Button-edit {
     align-items: flex-end;
-@media screen and (max-width: 1284px) {
-    .formAddPet {
-        width: 35rem;
-    }
-    #cr-form {
-        margin-left: 30%;
+    @media screen and (max-width: 1284px) {
+        .formAddPet {
+            width: 35rem;
+        }
+        #cr-form {
+            margin-left: 30%;
+        }
     }
 }

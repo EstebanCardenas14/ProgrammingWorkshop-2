@@ -8,12 +8,10 @@
     <title>FourPawsCitiziens</title>
     <link rel="icon" href="img/icon-logo.png">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 </head>
 
@@ -25,9 +23,7 @@
                 <img width="120px" height="100px" src="img/logo.svg" alt="logoPets" />
             </a>
             <a href="#Mapita"><img id="img-map" src="img/map.png " alt="Map" width="50px" height="50px"></a>
-            <a id="btn-addAnimal" style="margin-left: 4%;" href="#" data-bs-toggle="popover"
-                data-bs-trigger="hover focus" title="Añadir mascota"><img id="btn-add" width="35px"
-                    src="img/btn-add-animal.svg" alt="btn-add"></a>
+            <a id="btn-addAnimal" style="margin-left: 4%;" href="#" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Añadir mascota"><img id="btn-add" width="35px" src="img/btn-add-animal.svg" alt="btn-add"></a>
 
         </div>
     </nav>
@@ -42,29 +38,7 @@
     </div>
 
     <br>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
-        Launch demo modal
-    </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-                        Close
-                    </button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="cr-form" class="container">
         <form class=" formAddPet row g-3" id="formAdd">
 
@@ -140,29 +114,24 @@
             </div>
             <div class="col-md-4 ">
                 <label for="validationServer03 " class="form-label ">Raza</label>
-                <input type="text " placeholder="Ingrese la raza " class="form-control"
-                    aria-describedby="validationServer03Feedback " id="race" required>
+                <input type="text " placeholder="Ingrese la raza " class="form-control" aria-describedby="validationServer03Feedback " id="race" required>
             </div>
             <div class="col-md-4">
                 <label for="validationServer07 " class="form-label ">Nombre del Dueño </label>
-                <input type="text " placeholder="Ingrese nombre del Dueño" class="form-control"
-                    aria-describedby="validationServer03Feedback " id="owner" required>
+                <input type="text " placeholder="Ingrese nombre del Dueño" class="form-control" aria-describedby="validationServer03Feedback " id="owner" required>
             </div>
             <div class="col-md-4 ">
                 <label for="validationServer04 " class="form-label ">Direccion</label>
-                <input type="text " placeholder="Ingrese la Direccion" class="form-control"
-                    aria-describedby="validationServer03Feedback " id="adress" required>
+                <input type="text " placeholder="Ingrese la Direccion" class="form-control" aria-describedby="validationServer03Feedback " id="adress" required>
             </div>
 
             <div class="col-md-4 ">
                 <label for="validationServer05 " class="form-label ">Latitud</label>
-                <input type="text " placeholder="Utilizar Map/ Ingresar" class="form-control"
-                    aria-describedby="validationServer03Feedback " id="latitudFA" required>
+                <input type="text " placeholder="Utilizar Map/ Ingresar" class="form-control" aria-describedby="validationServer03Feedback " id="latitudFA">
             </div>
             <div class="col-md-4">
                 <label for="validationServer06 " class="form-label ">Longitud </label>
-                <input type="text " placeholder="Utilizar Map/ Ingresar" class="form-control"
-                    aria-describedby="validationServer03Feedback " id="LongitudFA" required>
+                <input type="text " placeholder="Utilizar Map/ Ingresar" class="form-control" aria-describedby="validationServer03Feedback " id="LongitudFA">
             </div>
 
             <div class="col-md-12">
@@ -170,11 +139,10 @@
                 <input type="file" class="form-control-file" name="image" id="image">
             </div>
 
-            <div class="col-md-6"><button type="button" class="btn btn-success" id=buttonmap
-                    style="margin-top: 5px;">Mostrar
+            <div class="col-md-6"><button type="button" class="btn btn-success" id=buttonmap style="margin-top: 5px;">Mostrar
                     Mapa</button></div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary" id=buttonsave style="margin-top: 5px;">Agregar
+                <button type="submit" class="btn btn-primary" id=buttonsave style="margin-top: 5px;">Agregar
                     Mascota</button>
             </div>
 
@@ -184,7 +152,7 @@
 
 
 
-    <!-- Modal -->
+    <!-- Modal Actualizar registro-->
     <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -200,9 +168,9 @@
                             <label for="">Owner : </label>
                             <input type="text" id="#owner" class="form-control" required>
                             <label for="">Latitud (Adress): </label>
-                            <input type="text" id="#latitud" class="form-control" required>
+                            <input type="text" id="#latitud" class="form-control">
                             <label for="">Longitud (Adress) : </label>
-                            <input type="text" id="#longitud" class="form-control" required>
+                            <input type="text" id="#longitud" class="form-control">
                             <label for="">Picture : </label>
                             <input type="file" class="btn form-control-file" name="image" id="image">
                         </div>
@@ -210,7 +178,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" id="">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" id="btnsavechanges">Save changes</button>
                 </div>
             </div>
@@ -249,6 +217,7 @@
         <br>
     </div>
     <!--contenido -->
+
     <!--Map-->
     <div class="container container-map" id="Mapita">
         <a id="btnx" href="#">
@@ -260,14 +229,9 @@
     <!--Map-->
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
