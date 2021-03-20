@@ -14,16 +14,11 @@ var txtlongitude = document.getElementById("longitude");
 var btnx = document.getElementById("btnx")
 
 addAnimal.addEventListener("click", () => {
-
     formAddAnimal.style.display = "block";
-    BtnAddedit.innerText =("Añadir mascota");
-
 });
 
 btnCloseForm.addEventListener("click", () => {
-
     formAddAnimal.style.display = "none";
-
 });
 
 function findMe() {

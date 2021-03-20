@@ -30,6 +30,10 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
             ],           
              select: true
         });
+        $('#xxx').click( function () {
+            console.log("haosfa")
+            t.row('.selected').remove().draw( false );
+        } );
         $('#table1 tbody').on( 'click', 'tr', function () {
             if ( $(this).hasClass('selected') ) {
                 $(this).removeClass('selected');
@@ -39,11 +43,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
                 $(this).addClass('selected');
             }
         } );
-        $('#btnsavechanges').on( 'click',function () {
-            if ( $(this).hasClass('selected') ) {
-            t.row('.selected').remove().draw( false );
-            }
-        } );
+        
      
         $('#buttonsave').on('click', function () {
             console.log("asf")
@@ -57,7 +57,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
                 race,
                 owner,
                 adress,
-                { "defaultContent": `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` },
+                `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>` 
             ]).draw(false);
         });
         $('editar222').on('click', '.table-remove', function () { $(this).parents('tr').detach(); });
