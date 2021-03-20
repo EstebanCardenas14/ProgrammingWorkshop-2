@@ -1,19 +1,19 @@
 let globaldata;
 var id = 0;
-let saveChanges = document.querySelector("#btnsavechanges");
-let newInfo;
+var saveChanges = document.querySelector("#btnsavechanges");
+var newInfo;
 
 let addmicroship = document.querySelector("#addmicroship").value;
 let addspecies = document.querySelector("#addspecies").value;
 let addsex = document.querySelector("#addsex").value;
-let addsize = document.querySelector("#size").value;
+let addsize = document.querySelector("#addsize").value;
 let addpotentDangerous = document.querySelector("#addpDangerous").value;
 let addneighborhood = document.querySelector("#addneighborhood").value;
 let addrace = document.querySelector("#addrace").value;
 let addowner = document.querySelector("#addowner").value;
 let addadress = document.querySelector("#addadress").value;
 let addlatitudFA = document.querySelector("#addlatitudFA").value;
-let addLongitudFA = document.querySelector("#addLongitudFA").value;
+let addLongitudFA = document.querySelector("#addlongitudFA").value;
 
 
 // console.log(namePet, namePerson, race, direccion, latitude, longitude, species, neighborhood,size,image);
@@ -76,12 +76,11 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
             ]).draw(false);
         });
 
-        $('editSaveChanges').on('click', '.table-remove', function () { $(this).parents('tr').detach(); });
-
-        // Automatically add a first row of data
-        $('#editSaveChanges').click();
+        $('editSaveChanges').on('click', '.table-remove', function() { $(this).parents('tr').detach(); });
+            // Automatically add a first row of data
+        $('#addRow').click();
         globaldata = data;
-    })
+    });
 }).catch(function (error) {
     // handle error
     console.log('error', error);
