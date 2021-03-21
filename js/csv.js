@@ -113,6 +113,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
                 document.querySelector("#addadress").value,
                 `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
             ]).draw(true);
+            alert("La mascota se agrego correctamente");
            }
         });
 
