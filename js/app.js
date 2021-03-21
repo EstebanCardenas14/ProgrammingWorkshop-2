@@ -59,9 +59,11 @@ function findMe2() {
     L.control.scale().addTo(map2);
     //Add a marker
     let x2 = new L.marker([latitude2, longitude2], { draggable: true }).addTo(map2);
-    x.addEventListener("click", () => { 
-      arrlat1.push( x2.getLatLng().lat)
-      arrlon2.push(x2.getLatLng().lng)
+    x2.addEventListener("mouseover", () => { 
+      console.log(x2.getLatLng().lat)
+      console.log(x2.getLatLng().lng)
+      arrlat1.add(x2.getLatLng().lat)
+      arrlon1.push(x2.getLatLng().lng)
     });
   }
   function error2() {
