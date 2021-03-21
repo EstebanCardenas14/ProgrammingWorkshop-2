@@ -97,12 +97,15 @@ div.appear {
     margin-left: 270px;
     z-index: 1;
 }
-
+#mapa2 {
+    width: 102%;
+    height: 400px;
+}
 #marker {
     color: red;
 }
 
-#btnx {
+#btnx2 {
     display: none;
     padding-left: 59%;
     position: absolute;
