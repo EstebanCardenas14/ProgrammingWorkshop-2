@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(https://w.wallhaven.cc/full/96/wallhaven-96wwow.jpg);
+    background-image: url(https://w.wallhaven.cc/full/g8/wallhaven-g8j1rd.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,10 +97,12 @@ div.appear {
     margin-left: 270px;
     z-index: 1;
 }
+
 #mapa2 {
     width: 102%;
     height: 400px;
 }
+
 #marker {
     color: red;
 }
