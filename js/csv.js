@@ -15,6 +15,7 @@ let addowner = document.querySelector("#addowner").value;
 let addadress = document.querySelector("#addadress").value;
 let addlatitudFA = document.querySelector("#addlatitudFA").value;
 let addLongitudFA = document.querySelector("#addlongitudFA").value;
+let btnclose = document.getElementById('buttonsave');
 
 // console.log(namePet, namePerson, race, direccion, latitude, longitude, species, neighborhood,size,image);
 var form = document.getElementById("formAdd");
@@ -90,6 +91,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
             }
 
             alert('Actualizacion exitosa')
+            form.style.display = "none";
 
         });
 
@@ -114,6 +116,10 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
                 `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
             ]).draw(true);
             alert("La mascota se agrego correctamente");
+            document.getElementById('formadd').reset();
+            form.style.display = "none";
+
+           
            }
         });
 

@@ -96,4 +96,5 @@ savemodal.addEventListener("click", () => {
   arrlon.push(longitudmodal.innerText);
   addlatitudFAA.value =latitudmodal.innerText;
   addLongitudFAA.value = longitudmodal.innerText;
+  $("#mapaModal").modal('hide');
 })
