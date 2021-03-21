@@ -70,7 +70,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
             let editadress = document.querySelector("#editadress").value
 
             if (editadress.length == 0|| editowner.length == 0|| editadress.length == 0) {
-                alert("Porfavor ingrese los nuevos datos")
+                alert("Por favor ingrese los nuevos datos")
 
          } else {
                 rowdata = t.row('.selected').data();
