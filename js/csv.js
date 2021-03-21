@@ -1,4 +1,3 @@
-
 let globaldata;
 let id = 0;
 let editSaveChanges = document.querySelector("#editSaveChanges");
@@ -18,7 +17,7 @@ let addLongitudFA = document.querySelector("#addlongitudFA").value;
 
 // console.log(namePet, namePerson, race, direccion, latitude, longitude, species, neighborhood,size,image);
 var form = document.getElementById("formAdd");
-d3.dsv(";", "./data/pets-citizens.csv", function (d) {
+d3.dsv(";", "./data/pets-citizens.csv", function(d) {
     return [
         d.microchip,
         d.species,
@@ -26,9 +25,12 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
         d.size,
         d.potentDangerous,
         d.neighborhood,
+        d.race,
+        d.owner,
+        d.address
     ];
-}).then(function (data) {
-    $(document).ready(function () {
+}).then(function(data) {
+    $(document).ready(function() {
 
         var t = $('#table1').DataTable({
             data: data,
@@ -48,7 +50,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
         });
 
 
-        $('#table1 tbody').on('click', 'tr', function () {
+        $('#table1 tbody').on('click', 'tr', function() {
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
             } else {
@@ -61,28 +63,30 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
             let editrace = document.querySelector("#editrace").value
             let editowner = document.querySelector("#editowner").value
             let editadress = document.querySelector("#editadress").value
-            if (editadress.length == 0|| editowner.length == 0|| editadress.length == 0) {
+            if (editadress.length == 0 || editowner.length == 0 || editadress.length == 0) {
                 console.log("vacio prro")
             } else {
-                    rowdata = t.row('.selected').data();
-                    form.style.display = "none"
-                    t.row.add([
-                        rowdata[0],
-                        rowdata[1],
-                        rowdata[2],
-                        rowdata[3],
-                        rowdata[4],
-                        rowdata[5],
-                        editrace,
-                        editowner,
-                        editadress,
-                        `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
-                    ]).draw(false);
-                    t.row('.selected').remove().draw(false);
-                }
-            
+                rowdata = t.row('.selected').data();
+                form.style.display = "none"
+                t.row.add([
+                    rowdata[0],
+                    rowdata[1],
+                    rowdata[2],
+                    rowdata[3],
+                    rowdata[4],
+                    rowdata[5],
+                    editrace,
+                    editowner,
+                    editadress,
+                    `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
+                ]).draw(false);
+                t.row('.selected').remove().draw(false);
+            }
+
+            alert('Actualizacion exitosa')
+
         });
-        $('#buttonsave').on('click', function () {
+        $('#buttonsave').on('click', function() {
             t.row.add([
                 document.querySelector("#addmicroship").value,
                 document.querySelector("#addspecies").value,
@@ -98,13 +102,11 @@ d3.dsv(";", "./data/pets-citizens.csv", function (d) {
         });
 
 
-        $('editSaveChanges').on('click', '.table-remove', function () { $(this).parents('tr').detach(); });
+        $('editSaveChanges').on('click', '.table-remove', function() { $(this).parents('tr').detach(); });
         // Automatically add a first row of data
         globaldata = data;
     });
-}).catch(function (error) {
+}).catch(function(error) {
     // handle error
     console.log('error', error);
 });
-
-
