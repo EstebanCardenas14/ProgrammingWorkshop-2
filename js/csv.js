@@ -2,6 +2,7 @@ let globaldata;
 let id = 0;
 let editSaveChanges = document.querySelector("#editSaveChanges");
 let rowdata;
+let example =[23.410];
 
 let addmicroship = document.querySelector("#addmicroship").value;
 let addspecies = document.querySelector("#addspecies").value;
@@ -17,7 +18,10 @@ let addLongitudFA = document.querySelector("#addlongitudFA").value;
 
 // console.log(namePet, namePerson, race, direccion, latitude, longitude, species, neighborhood,size,image);
 var form = document.getElementById("formAdd");
+
 d3.dsv(";", "./data/pets-citizens.csv", function(d) {
+
+    example = d.microchip;
     return [
         d.microchip,
         d.species,
@@ -63,9 +67,11 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
             let editrace = document.querySelector("#editrace").value
             let editowner = document.querySelector("#editowner").value
             let editadress = document.querySelector("#editadress").value
-            if (editadress.length == 0 || editowner.length == 0 || editadress.length == 0) {
-                console.log("vacio prro")
-            } else {
+
+            if (editadress.length == 0|| editowner.length == 0|| editadress.length == 0) {
+                alert("Porfavor ingrese los nuevos datos")
+
+         } else {
                 rowdata = t.row('.selected').data();
                 form.style.display = "none"
                 t.row.add([
@@ -86,7 +92,14 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
             alert('Actualizacion exitosa')
 
         });
-        $('#buttonsave').on('click', function() {
+
+        $('#buttonsave').on('click', function () {
+            if(document.querySelector("#addmicroship").value == "" ||  document.querySelector("#addspecies").value == " " ||  document.querySelector("#addsex").value == " " ||
+            document.querySelector("#addsize").value == " " || document.querySelector("#addpDangerous").value == " " ||  document.querySelector("#addneighborhood").value == " " ||
+            document.querySelector("#addrace").value == "" ||  document.querySelector("#addowner").value == "" ||  document.querySelector("#addadress").value == "" ){
+                   alert("Señor Usuario por favor ingrese todos los datos")   
+             }else{
+
             t.row.add([
                 document.querySelector("#addmicroship").value,
                 document.querySelector("#addspecies").value,
@@ -99,6 +112,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
                 document.querySelector("#addadress").value,
                 `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
             ]).draw(false);
+           }
         });
 
 
