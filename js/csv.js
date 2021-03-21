@@ -93,7 +93,8 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
 
         });
 
-        $('#buttonsave').on('click', function () {
+        $('#buttonsave').on('click', function (event) {
+            event.preventDefault();
             if(document.querySelector("#addmicroship").value == "" ||  document.querySelector("#addspecies").value == " " ||  document.querySelector("#addsex").value == " " ||
             document.querySelector("#addsize").value == " " || document.querySelector("#addpDangerous").value == " " ||  document.querySelector("#addneighborhood").value == " " ||
             document.querySelector("#addrace").value == "" ||  document.querySelector("#addowner").value == "" ||  document.querySelector("#addadress").value == "" ){
@@ -111,7 +112,7 @@ d3.dsv(";", "./data/pets-citizens.csv", function(d) {
                 document.querySelector("#addowner").value,
                 document.querySelector("#addadress").value,
                 `<button class = "btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">Actualizar</button>`,
-            ]).draw(false);
+            ]).draw(true);
            }
         });
 
