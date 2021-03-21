@@ -2,17 +2,16 @@ const addAnimal = document.getElementById("btn-addAnimal");
 const formAddAnimal = document.querySelector("#formAdd");
 const btnCloseForm = document.querySelector("#closeFormAdd");
 var imgmap = document.getElementById("img-map");
-var buttonmap = document.getElementById("buttonmap");
 var buttonmap2 = document.getElementById("buttonmap2");
-const card = document.querySelector(".card-animals");
 var output = document.getElementById("map");
 var output2 = document.getElementById("mapa2");
-
+let savemodal = document.getElementById("save-modal")
 var BtnAddedit = document.getElementById("add-edit");
-var txtlatitude = document.getElementById("latitude");
-var txtlongitude = document.getElementById("longitude");
+let addlatitudFAA = document.querySelector("#addlatitudFA");
+let addLongitudFAA = document.querySelector("#addlongitudFA");
 let btnx = document.querySelector("#btnx2")
-
+var latitudmodal = document.getElementById("latitud-modal")
+var longitudmodal = document.getElementById("longitud-modal")
 var arrlat = [];
 var arrlon = [];
 
@@ -35,9 +34,9 @@ function findMe() {
         var x = new L.marker([arrlat[i], arrlon[i]], { draggable: true }).addTo(map);
       }
     } catch (error) {
-      
+
     }
-   
+
   }
   function error() {
     output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
@@ -59,11 +58,9 @@ function findMe2() {
     L.control.scale().addTo(map2);
     //Add a marker
     let x2 = new L.marker([latitude2, longitude2], { draggable: true }).addTo(map2);
-    x2.addEventListener("mouseover", () => { 
-      console.log(x2.getLatLng().lat)
-      console.log(x2.getLatLng().lng)
-      arrlat1.add(x2.getLatLng().lat)
-      arrlon1.push(x2.getLatLng().lng)
+    x2.addEventListener("mouseover", () => {
+      latitudmodal.innerText = x2.getLatLng().lat + "";
+      longitudmodal.innerText = x2.getLatLng().lng + "";
     });
   }
   function error2() {
@@ -74,15 +71,10 @@ function findMe2() {
 
 
 
-addAnimal.addEventListener("click", () => {
-
-    formAddAnimal.style.display = "block";
-    BtnAddedit.innerText =("Añadir mascota");
-
-});
-
+addAnimal.addEventListener("click", () => formAddAnimal.style.display = "block");
 btnCloseForm.addEventListener("click", () => formAddAnimal.style.display = "none");
-btnx.addEventListener( "click", ()=>{
+
+btnx.addEventListener("click", () => {
   console.log("safasf")
   output.style.display = "none";
   btnx.style.display = "none"
@@ -93,13 +85,15 @@ imgmap.addEventListener("click", () => {
   findMe()
 });
 buttonmap2.addEventListener("click", () => {
-  
+  output.style.display = "block"
+  btnx.style.display = "block"
   findMe2();
 });
 
-buttonmap.addEventListener("click", () => {
-  output.style.display = "block"
-  btnx.style.display = "block"
-  findMe()
-});
 
+savemodal.addEventListener("click", () => {
+  arrlat.push(latitudmodal.innerText);
+  arrlon.push(longitudmodal.innerText);
+  addlatitudFAA.value =latitudmodal.innerText;
+  addLongitudFAA.value = longitudmodal.innerText;
+})
