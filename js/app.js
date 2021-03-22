@@ -30,14 +30,7 @@ function findMe() {
     //Add zoom 
     L.control.scale().addTo(map);
     //Add a marker
-    try {
-      for (let i = 0; i < arrlat.length; i++) {
-        var x = new L.marker([arrlat[i], arrlon[i]], { draggable: true }).addTo(map);
-      }
-    } catch (error) {
-
-    }
-
+  
   }
   function error() {
     output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
@@ -99,4 +92,14 @@ savemodal.addEventListener("click", () => {
   addlatitudFAA.value =latitudmodal.innerText;
   addLongitudFAA.value = longitudmodal.innerText;
   $("#mapaModal").modal('hide');
+})
+updateMap.addEventListener("click", () => {
+  console.log(arrlat)
+  try {
+    for (let i = 0; i < arrlat.length; i++) {
+      let x2 = new L.marker([arrlat[i], arrlon[i]], { draggable: true }).addTo(map);
+    }
+  } catch (error) {
+
+  }
 })
