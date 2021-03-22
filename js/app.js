@@ -12,16 +12,17 @@ let addLongitudFAA = document.querySelector("#addlongitudFA");
 let btnx = document.querySelector("#btnx2")
 var latitudmodal = document.getElementById("latitud-modal")
 var longitudmodal = document.getElementById("longitud-modal")
+var updateMap = document.getElementById("actualizarmapa")
 var arrlat = [];
 var arrlon = [];
-
+let map;
 function findMe() {
   function localization(posicion) {
 
     var latitude = posicion.coords.latitude;
     var longitude = posicion.coords.longitude;
     //Show the map
-    let map = L.map('map').setView([latitude, longitude], 15);
+    map = L.map('map').setView([latitude, longitude], 15);
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
       maxZoom: 18
@@ -30,7 +31,7 @@ function findMe() {
     L.control.scale().addTo(map);
     //Add a marker
     try {
-      for (let i = 0; i < arrlat1.length; i++) {
+      for (let i = 0; i < arrlat.length; i++) {
         var x = new L.marker([arrlat[i], arrlon[i]], { draggable: true }).addTo(map);
       }
     } catch (error) {
@@ -94,6 +95,7 @@ buttonmap2.addEventListener("click", () => {
 savemodal.addEventListener("click", () => {
   arrlat.push(latitudmodal.innerText);
   arrlon.push(longitudmodal.innerText);
+  console.log(arrlat)
   addlatitudFAA.value =latitudmodal.innerText;
   addLongitudFAA.value = longitudmodal.innerText;
   $("#mapaModal").modal('hide');
