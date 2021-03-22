@@ -1,16 +1,27 @@
     footer {
-        height: 30px;
+       
         background-color: black;
-        color: white;
+        height: 30px;
         text-align: center;
+        color: white;
         font-size: 14px;
     }
     
     .carga {
-        position: absolute;
         top: 0%;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        margin: auto;
+    }
+
+    .Title{
+        font: oblique bold 120% cursive;
+        font-size: xx-large;
+    }
+
+    .SubTitle{
+        font: small-caps 100%/200% serif;
+        font-size: xx-large;
     }
