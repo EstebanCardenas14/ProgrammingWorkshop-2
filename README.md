@@ -55,5 +55,5 @@ To see the project, clone the repository in the folder of your preference, you m
 $ git clone https://github.com/EstebanCardenas14/ProgrammingWorkshop-2.git
 ```
 ## GitHub Pages
-https://estebancardenas14.github.io/ProgrammingWorkshop-2/
+https://estebancardenas14.github.io/ProgrammingWorkshop-2.github.io/
 
