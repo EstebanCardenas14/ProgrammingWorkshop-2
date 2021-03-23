@@ -74,10 +74,12 @@ btnCloseForm.addEventListener("click", () => formAddAnimal.style.display = "none
 btnx.addEventListener("click", () => {
   output.style.display = "none";
   btnx.style.display = "none"
+  updateMap.style.display = "none"
 });
 imgmap.addEventListener("click", () => {
   output.style.display = "block"
   btnx.style.display = "block"
+  updateMap.style.display = "block"
   findMe()
 });
 buttonmap2.addEventListener("click", () => {
