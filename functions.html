@@ -31,37 +31,6 @@
     <!--Menu-->
 
 
-    <!-- Modal mostrar mapa -->
-    <div class="modal fade"  id="mapaModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Mapa mascotas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="container container-map">
-                                    <div id="mapa2"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <strong>Latitud :</strong>
-                                <p id="latitud-modal"> </p>
-                            </div>
-                            <div class="col-md-6">
-                                <strong>Longitud : </strong>
-                                <p id="longitud-modal"> </p>
-                            </div>
-                            <button id="save-modal" class="btn btn-primary">Agregar Latitud y Longitud</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- añadir mascota  -->
     <div id="formAdd" class="container">
@@ -210,9 +179,7 @@
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                 data-bs-target="#mapaModal" id="buttonmap3" style="margin-top: 5px;">Mostrar
                                 Mapa</button>
-                       
                         </div>
-                       
 
                     </form>
                 </div>
@@ -226,7 +193,37 @@
         </div>
     </div>
 
-
+ <!-- Modal mostrar mapa -->
+    <div class="modal fade"  id="mapaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mapa mascotas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container container-map">
+                                    <div id="mapa2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Latitud :</strong>
+                                <p id="latitud-modal"> 0000 </p>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Longitud : </strong>
+                                <p id="longitud-modal"> 0000 </p>
+                            </div>
+                            <button id="save-modal" class="btn btn-primary">Agregar Latitud y Longitud</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- contenido-->
 
@@ -259,8 +256,10 @@
     </div>
     <!--contenido -->
      <!--actualizar -->
-    <button type="button" class="btn btn-secondary" id="actualizarmapa"
+     <div class="container">
+    <button type="button" style="display: none;" class="btn btn-secondary" id="actualizarmapa"
     data-bs-dismiss="modal">Actualizar</button>
+    </div>
     <!--actualizar -->
     <!--Map-->
     <div class="container container-map" id="Mapita">

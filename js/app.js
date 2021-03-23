@@ -3,12 +3,15 @@ const formAddAnimal = document.querySelector("#formAdd");
 const btnCloseForm = document.querySelector("#closeFormAdd");
 var imgmap = document.getElementById("img-map");
 var buttonmap2 = document.getElementById("buttonmap2");
+var buttonmap3 = document.getElementById("buttonmap3");
 var output = document.getElementById("map");
 var output2 = document.getElementById("mapa2");
 let savemodal = document.getElementById("save-modal")
 var BtnAddedit = document.getElementById("add-edit");
 let addlatitudFAA = document.querySelector("#addlatitudFA");
 let addLongitudFAA = document.querySelector("#addlongitudFA");
+let editlatitud = document.querySelector("#editlatitud");
+let editlongitud = document.querySelector("#editlongitud");
 let btnx = document.querySelector("#btnx2")
 var latitudmodal = document.getElementById("latitud-modal")
 var longitudmodal = document.getElementById("longitud-modal")
@@ -30,7 +33,7 @@ function findMe() {
     //Add zoom 
     L.control.scale().addTo(map);
     //Add a marker
-  
+    updateMap.style.display = "block";
   }
   function error() {
     output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
@@ -63,13 +66,12 @@ function findMe2() {
   navigator.geolocation.getCurrentPosition(localization2, error2);
 }
 
-
-
-addAnimal.addEventListener("click", () => formAddAnimal.style.display = "block");
+addAnimal.addEventListener("click", () => {
+  formAddAnimal.style.display = "block"
+});
 btnCloseForm.addEventListener("click", () => formAddAnimal.style.display = "none");
 
 btnx.addEventListener("click", () => {
-  console.log("safasf")
   output.style.display = "none";
   btnx.style.display = "none"
 });
@@ -79,18 +81,27 @@ imgmap.addEventListener("click", () => {
   findMe()
 });
 buttonmap2.addEventListener("click", () => {
-  output.style.display = "block"
-  btnx.style.display = "block"
+  savemodal.innerText  = "Agregar Latitud y Longitud 1"
+  findMe2();
+});
+buttonmap3.addEventListener("click", () => {
+  savemodal.innerText  = "Agregar Latitud y Longitud 2"
   findMe2();
 });
 
 
 savemodal.addEventListener("click", () => {
+  if(savemodal.innerText == "Agregar Latitud y Longitud 1") {
+    addlatitudFAA.value = latitudmodal.innerText;
+    addLongitudFAA.value = longitudmodal.innerText;
+  }
+  else if (savemodal.innerText == "Agregar Latitud y Longitud 2") {
+    editlatitud.value = latitudmodal.innerText;
+    editlongitud.value = longitudmodal.innerText;
+  } 
   arrlat.push(latitudmodal.innerText);
   arrlon.push(longitudmodal.innerText);
-  console.log(arrlat)
-  addlatitudFAA.value =latitudmodal.innerText;
-  addLongitudFAA.value = longitudmodal.innerText;
+
   $("#mapaModal").modal('hide');
 })
 updateMap.addEventListener("click", () => {
